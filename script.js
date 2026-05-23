@@ -162,6 +162,53 @@ const commitments = [
     image: "frame-2087327867-13.png",
     card: "frame-2087327867-13.png",
     featureImage: "frame-2087327867-13.png"
+  },
+  {
+    title: "Federal Ministry of Works",
+    subtitle: "National Road Infrastructure Programme",
+    summary: "A ₦300 billion supplementary budget is driving legacy superhighways, nationwide dualizations, 260+ emergency palliatives, and critical bridge reconstructions across every geopolitical zone.",
+    full: "Under the Tinubu administration, the Federal Ministry of Works and FERMA are executing a strategic mix of legacy superhighways, critical dualization projects, and preventive maintenance across Nigeria.",
+    stats: [["700 km", "Lagos-Calabar Coastal Highway"], ["260+", "Emergency palliative repairs"], ["₦300B", "Supplementary road budget"]],
+    image: "frame-2087327867-9.png",
+    card: "frame-2087327867-9.png",
+    detailImage: "cards/billboards-fct-roads-infrastructure.jpg",
+    featureImage: "cards/billboards-fct-roads-infrastructure.jpg",
+    categories: [
+      {
+        number: "01",
+        title: "Legacy Superhighways & Mega Corridors",
+        description: "Monumental multi-state routes designed to boost national integration, trade, and economic development.",
+        items: [
+          { name: "Lagos-Calabar Coastal Highway", badge: "700 km", detail: "A massive coastal corridor incorporating a rail line in its median. Phase 1 (47.7 km section) actively under construction, providing commute relief along the Lekki-Ajah axis in Lagos." },
+          { name: "Sokoto-Badagry Highway", badge: "1,068 km", detail: "A monumental north-south legacy route traversing multiple states. Built with durable concrete pavement and designed to include a rail line; early-stage implementation and financing underway." },
+          { name: "Calabar-Ebonyi-Abuja Superhighway (Trans-Saharan Highway)", badge: "477 km", detail: "An ongoing legacy highway traversing Cross River, Ebonyi, Kogi, Benue, Nasarawa, and the FCT." }
+        ]
+      },
+      {
+        number: "02",
+        title: "Major Highway Dualizations, Reconstructions & Expansions",
+        description: "Key national transit corridors undergoing expansion and structural overhaul using Continuously Reinforced Concrete Pavement (CRCP) technology.",
+        items: [
+          { name: "Abuja-Kaduna-Zaria-Kano Road", badge: "375 km", detail: "Revitalized with a ₦740.79 billion funding injection. Major sections remain under construction, with parts partially completed." },
+          { name: "Akwanga-Jos-Bauchi-Gombe-Biu-Maiduguri Expressway", badge: "422 km", detail: "Presidential legacy dualization incorporating solar streetlights and railway tracks." },
+          { name: "South-West Highway Contracts", badge: "₦690B", detail: "Package spanning Kaduna, Oyo, Ogun, and Osun states, focusing heavily on CRCP technology." },
+          { name: "Lagos-Ibadan Expressway", detail: "Nearing completion with remaining underpasses and localized repairs ongoing." },
+          { name: "Enugu-Port Harcourt Expressway", detail: "Active rehabilitation and reconstruction across the entire corridor." },
+          { name: "Mushin-Apapa-Oshodi Expressway", detail: "Dualization and structural redesign underway, improving port access logistics in Lagos." }
+        ]
+      },
+      {
+        number: "03",
+        title: "Road Maintenance, Palliatives & Emergency Interventions",
+        description: "The Ministry flagged off 260 emergency palliatives and FERMA programs targeting failed corridors, washouts, and collapsed bridges nationwide.",
+        items: [
+          { name: "Nationwide Emergency Palliatives", badge: "260+", detail: "Special intervention repairs across Makurdi–Nsukka, Lagos–Abeokuta, East-West Road (Section II), Benin Bypass, and Jebba–Mokwa Road." },
+          { name: "Operation Safeguard the Roads (FERMA)", detail: "Community-driven initiative engaging youth along federal highways for routine maintenance, pothole patching, vegetation control, and drainage clearing." },
+          { name: "Artisan Market Bridge & Akpoha Bridge", detail: "Complete structural reconstruction of both bridges following collapse due to overloading and heavy seasonal flooding." },
+          { name: "Third Mainland Bridge & Carter Bridge", detail: "Active structural reinforcement on Third Mainland Bridge; demolition and redesign commenced on Carter Bridge following formal approval." }
+        ]
+      }
+    ]
   }
 ];
 
@@ -329,7 +376,8 @@ function initCommitmentGrid() {
     { index: 10, title: "Student Venture Capital Grant", subtitle: commitments[10].subtitle, summary: "Students now have access to startup funding for their innovative ideas." },
     { index: 11, title: "Trade Diplomacy Expansion", subtitle: commitments[11].subtitle, summary: commitments[11].summary },
     { index: 13, title: "Economic Growth & Recovery", subtitle: commitments[13].subtitle, summary: commitments[13].summary },
-    { index: 14, title: "NDDC Youth Empowerment", subtitle: commitments[14].subtitle, summary: "Youth empowerment programmes are opening technical and vocational pathways for young people across the Niger Delta." }
+    { index: 14, title: "NDDC Youth Empowerment", subtitle: commitments[14].subtitle, summary: "Youth empowerment programmes are opening technical and vocational pathways for young people across the Niger Delta." },
+    { index: 15, title: "Federal Ministry of Works", subtitle: commitments[15].subtitle, summary: "A ₦300 billion supplementary budget driving legacy superhighways, nationwide dualizations, 260+ emergency palliatives, and critical bridge reconstructions across Nigeria." }
   ].map((entry) => ({ ...entry, item: commitments[entry.index] }));
   grid.innerHTML = pageCommitments.map(commitmentListCardMarkup).join("");
 }
@@ -397,6 +445,33 @@ function initDetailPage() {
         <h2>Full Details</h2>
         <p>${fullDetails}</p>
       </article>
+
+      ${item.categories ? `
+        <div class="detail-category-section" aria-label="Programme breakdown">
+          ${item.categories.map(cat => `
+            <div class="detail-category">
+              <div class="detail-category-header">
+                <span class="detail-category-number" aria-hidden="true">${cat.number}</span>
+                <div>
+                  <h2 class="detail-category-title">${cat.title}</h2>
+                  <p class="detail-category-desc">${cat.description}</p>
+                </div>
+              </div>
+              <div class="detail-category-items">
+                ${cat.items.map(it => `
+                  <div class="detail-category-item">
+                    <div class="detail-category-item-meta">
+                      <strong class="detail-category-item-name">${it.name}</strong>
+                      ${it.badge ? `<span class="detail-category-item-badge">${it.badge}</span>` : ""}
+                    </div>
+                    <p class="detail-category-item-detail">${it.detail}</p>
+                  </div>
+                `).join("")}
+              </div>
+            </div>
+          `).join("")}
+        </div>
+      ` : ""}
     </section>
   `;
 }
