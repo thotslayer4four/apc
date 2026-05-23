@@ -1,0 +1,4 @@
+*.zip
+.DS_Store
+php-server.err
+php-server.log

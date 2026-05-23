@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://apcpromisekept.com/sitemap.xml
