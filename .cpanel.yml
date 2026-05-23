@@ -1,0 +1,16 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/apcpwmuu/public_html/
+    - /bin/cp index.html $DEPLOYPATH
+    - /bin/cp commitments.html $DEPLOYPATH
+    - /bin/cp commitment-detail.html $DEPLOYPATH
+    - /bin/cp chairman.html $DEPLOYPATH
+    - /bin/cp contact.html $DEPLOYPATH
+    - /bin/cp detail.html $DEPLOYPATH
+    - /bin/cp script.js $DEPLOYPATH
+    - /bin/cp styles.css $DEPLOYPATH
+    - /bin/cp robots.txt $DEPLOYPATH
+    - /bin/cp sitemap.xml $DEPLOYPATH
+    - /bin/cp -R assets $DEPLOYPATH
+    - /bin/cp -R api $DEPLOYPATH
