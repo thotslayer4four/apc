@@ -159,9 +159,10 @@ const commitments = [
     summary: "Youth empowerment programmes are opening technical and vocational pathways for young people across the Niger Delta.",
     full: "NDDC youth empowerment initiatives are equipping young Nigerians with practical skills, supporting livelihoods, and expanding opportunities for technical careers.",
     stats: [["Youth", "Beneficiaries"], ["Skills", "Training focus"], ["Niger Delta", "Regional impact"]],
-    image: "frame-2087327867-13.png",
-    card: "frame-2087327867-13.png",
-    featureImage: "frame-2087327867-13.png"
+    image: "cards/NDDC Youth Empowerment.jpg",
+    card: "cards/NDDC Youth Empowerment.jpg",
+    detailImage: "cards/NDDC Youth Empowerment.jpg",
+    featureImage: "cards/NDDC Youth Empowerment.jpg"
   },
   {
     title: "Federal Ministry of Works",
@@ -169,10 +170,32 @@ const commitments = [
     summary: "A ₦300 billion supplementary budget is driving legacy superhighways, nationwide dualizations, 260+ emergency palliatives, and critical bridge reconstructions across every geopolitical zone.",
     full: "Under the Tinubu administration, the Federal Ministry of Works and FERMA are executing a strategic mix of legacy superhighways, critical dualization projects, and preventive maintenance across Nigeria.",
     stats: [["700 km", "Lagos-Calabar Coastal Highway"], ["260+", "Emergency palliative repairs"], ["₦300B", "Supplementary road budget"]],
-    image: "frame-2087327867-9.png",
-    card: "frame-2087327867-9.png",
-    detailImage: "cards/billboards-fct-roads-infrastructure.jpg",
-    featureImage: "cards/billboards-fct-roads-infrastructure.jpg",
+    image: "slider/slider4.png",
+    card: "slider/slider4.png",
+    detailImage: "slider/slider4.png",
+    featureImage: "slider/slider4.png",
+    gallery: [
+      {
+        src: "federal ministry of works/LAGOS-CALABAR COASTAL HIGHWAY.jpeg",
+        caption: "Lagos-Calabar Coastal Highway",
+        alt: "Lagos-Calabar Coastal Highway under construction — Tinubu administration's 700km coastal corridor integrating road and rail infrastructure"
+      },
+      {
+        src: "federal ministry of works/dUALIZATION OF EAST–WEST ROAD.jpeg",
+        caption: "Dualization of East-West Road",
+        alt: "Dualization of the East-West Road, Federal Ministry of Works ongoing reconstruction under the Renewed Hope Agenda"
+      },
+      {
+        src: "federal ministry of works/ongoing BUJA- KADUNA- ZARIA- KANO HIGHWAy.jpeg",
+        caption: "Abuja-Kaduna-Zaria-Kano Highway",
+        alt: "Ongoing construction of Abuja-Kaduna-Zaria-Kano Highway revitalized with ₦740.79 billion federal funding injection"
+      },
+      {
+        src: "federal ministry of works/ongoing Rehabilitation of Enugu-Port Harcourt Road.jpeg",
+        caption: "Rehabilitation of Enugu-Port Harcourt Road",
+        alt: "Ongoing rehabilitation and reconstruction of the Enugu-Port Harcourt Expressway by the Federal Ministry of Works Nigeria"
+      }
+    ],
     categories: [
       {
         number: "01",
@@ -209,6 +232,38 @@ const commitments = [
         ]
       }
     ]
+  },
+  {
+    title: "Youth in Governance",
+    subtitle: "Record Youth Appointments",
+    summary: "President Bola Ahmed Tinubu has appointed the highest number of youths in government leadership positions in Nigeria's history.",
+    full: "President Bola Ahmed Tinubu has appointed the highest number of youths in government leadership positions in Nigeria's history, ensuring that the next generation has a direct voice in shaping the policies and decisions that will define Nigeria's future.",
+    stats: [["Highest Ever", "Youth appointments in history"], ["Nationwide", "Representation across ministries"], ["2023–Present", "Under Tinubu administration"]],
+    image: "frame-2087327867-14.png",
+    card: "frame-2087327867-14.png",
+    featureImage: "frame-2087327867-14.png"
+  },
+  {
+    title: "Gas to Prosperity",
+    subtitle: "Nigeria's Gas Revolution",
+    summary: "With the complete linking of southern to northern regions via gas pipelines and over ₦10B in Final Investment Decisions, Nigeria's gas revolution is becoming a reality.",
+    full: "With the complete linking of the southern to the northern regions with gas pipelines and over ₦10 Billion in Final Investment Decisions, the Tinubu administration is turning Nigeria's vast gas reserves into an engine of economic growth, industrialization, and energy security.",
+    stats: [["₦10B+", "Final Investment Decisions"], ["North–South", "Pipeline connection achieved"], ["Gas Revolution", "National energy objective"]],
+    image: "cards/Gas to prosperity.png",
+    card: "cards/Gas to prosperity.png",
+    detailImage: "cards/Gas to prosperity.png",
+    featureImage: "cards/Gas to prosperity.png"
+  },
+  {
+    title: "Support for SMEs & MSMEs",
+    subtitle: "Affordable Credit & Business Grants",
+    summary: "Improving access to affordable credit, digital financial inclusion, and direct business grants to cushion the effects of the economic reforms.",
+    full: "The Tinubu administration is improving access to affordable credit, expanding digital financial inclusion, and providing direct business grants to small and medium enterprises across Nigeria — cushioning the effects of bold economic reforms and empowering entrepreneurs to grow, hire, and contribute to national prosperity.",
+    stats: [["Affordable Credit", "Access for SMEs & MSMEs"], ["Digital Inclusion", "Financial services expansion"], ["Direct Grants", "Business support nationwide"]],
+    image: "cards/Support for SMEs.jpg",
+    card: "cards/Support for SMEs.jpg",
+    detailImage: "cards/Support for SMEs.jpg",
+    featureImage: "cards/Support for SMEs.jpg"
   }
 ];
 
@@ -364,11 +419,10 @@ function initCommitmentGrid() {
   const pageCommitments = [
     { index: 0, title: "Access to Quality & Affordable", subtitle: commitments[0].subtitle, summary: "Establishing cancer treatment centres across Nigeria's geopolitical zones to bring world-class medical care to all Nigerians." },
     { index: 1, title: "Presidential Intervention Fund", subtitle: commitments[1].subtitle, summary: "N75 Billion for MSMEs, N11 Billion SMEDAN support, and N30 Billion Youth Entrepreneurship Fund creating jobs across Nigeria." },
-    { index: 2, title: commitments[2].title, subtitle: commitments[2].subtitle, summary: commitments[2].summary },
     { index: 4, title: "Nigerian Education Loan Fund", subtitle: commitments[4].subtitle, summary: "Making higher education accessible to every Nigerian student through interest-free education loans regardless of background." },
     { index: 3, title: "Universal Health Coverage", subtitle: commitments[3].subtitle, summary: "Medipool established for affordable healthcare. 4 Million Nigerians enrolled in just two years versus 16M in previous two decades." },
     { index: 5, title: "Primary Healthcare", subtitle: commitments[5].subtitle, summary: "Commitment to revamp 17,600 Primary Healthcare Centres by 2027. 1,480 already revamped, 5,500 being upgraded across all zones." },
-    { index: 6, title: "Federal Roads", subtitle: commitments[6].subtitle, summary: commitments[6].summary },
+    { index: 6, title: "FCT Roads", subtitle: commitments[6].subtitle, summary: commitments[6].summary },
     { index: 7, title: "Renewed Hope Agricultural", subtitle: "Mechanization Programme", summary: "2,000 tractors, 10 combine harvesters, 9,000 farming implements - the largest agricultural mechanization procurement in Nigeria's history." },
     { index: 12, title: "Nigeria-UK Relations", subtitle: commitments[12].subtitle, summary: commitments[12].summary },
     { index: 8, title: "ASUU-FGN Pact", subtitle: commitments[8].subtitle, summary: "A landmark agreement that ends years of disputes and restores academic stability across Nigeria's university system." },
@@ -377,7 +431,10 @@ function initCommitmentGrid() {
     { index: 11, title: "Trade Diplomacy Expansion", subtitle: commitments[11].subtitle, summary: commitments[11].summary },
     { index: 13, title: "Economic Growth & Recovery", subtitle: commitments[13].subtitle, summary: commitments[13].summary },
     { index: 14, title: "NDDC Youth Empowerment", subtitle: commitments[14].subtitle, summary: "Youth empowerment programmes are opening technical and vocational pathways for young people across the Niger Delta." },
-    { index: 15, title: "Federal Ministry of Works", subtitle: commitments[15].subtitle, summary: "A ₦300 billion supplementary budget driving legacy superhighways, nationwide dualizations, 260+ emergency palliatives, and critical bridge reconstructions across Nigeria." }
+    { index: 15, title: "Federal Ministry of Works", subtitle: commitments[15].subtitle, summary: "A ₦300 billion supplementary budget driving legacy superhighways, nationwide dualizations, 260+ emergency palliatives, and critical bridge reconstructions across Nigeria." },
+    { index: 16, title: commitments[16].title, subtitle: commitments[16].subtitle, summary: commitments[16].summary },
+    { index: 17, title: commitments[17].title, subtitle: commitments[17].subtitle, summary: commitments[17].summary },
+    { index: 18, title: commitments[18].title, subtitle: commitments[18].subtitle, summary: commitments[18].summary }
   ].map((entry) => ({ ...entry, item: commitments[entry.index] }));
   grid.innerHTML = pageCommitments.map(commitmentListCardMarkup).join("");
 }
@@ -445,6 +502,27 @@ function initDetailPage() {
         <h2>Full Details</h2>
         <p>${fullDetails}</p>
       </article>
+
+      ${item.gallery ? `
+        <section class="detail-gallery" aria-label="On the ground — project photography">
+          <h2 class="detail-gallery-heading">On the Ground</h2>
+          <span class="intro-green-rule" aria-hidden="true"></span>
+          <div class="detail-gallery-grid">
+            ${item.gallery.map(photo => `
+              <figure class="detail-gallery-figure">
+                <img
+                  src="assets/images/${photo.src}"
+                  alt="${photo.alt}"
+                  loading="lazy"
+                  width="800"
+                  height="533"
+                >
+                <figcaption>${photo.caption}</figcaption>
+              </figure>
+            `).join("")}
+          </div>
+        </section>
+      ` : ""}
 
       ${item.categories ? `
         <div class="detail-category-section" aria-label="Programme breakdown">
