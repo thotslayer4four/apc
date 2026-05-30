@@ -239,9 +239,9 @@ const commitments = [
     summary: "President Bola Ahmed Tinubu has appointed the highest number of youths in government leadership positions in Nigeria's history.",
     full: "President Bola Ahmed Tinubu has appointed the highest number of youths in government leadership positions in Nigeria's history, ensuring that the next generation has a direct voice in shaping the policies and decisions that will define Nigeria's future.",
     stats: [["Highest Ever", "Youth appointments in history"], ["Nationwide", "Representation across ministries"], ["2023–Present", "Under Tinubu administration"]],
-    image: "frame-2087327867-14.png",
-    card: "frame-2087327867-14.png",
-    featureImage: "frame-2087327867-14.png"
+    image: "list/5.png",
+    card: "list/5.png",
+    featureImage: "list/5.png"
   },
   {
     title: "Gas to Prosperity",

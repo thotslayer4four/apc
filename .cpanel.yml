@@ -7,6 +7,7 @@ deployment:
     - /bin/cp commitment-detail.html $DEPLOYPATH
     - /bin/cp chairman.html $DEPLOYPATH
     - /bin/cp contact.html $DEPLOYPATH
+    - /bin/cp radio.html $DEPLOYPATH
     - /bin/cp detail.html $DEPLOYPATH
     - /bin/cp script.js $DEPLOYPATH
     - /bin/cp styles.css $DEPLOYPATH
