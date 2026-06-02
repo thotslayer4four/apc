@@ -77,8 +77,8 @@ const commitments = [
     featureImage: "cards/billboards-fct-roads-infrastructure.jpg"
   },
   {
-    title: "Renewed Hope Agricultural",
-    subtitle: "Mechanization Programme",
+    title: "Renewed Hope Agricultural Mechanization Programme",
+    subtitle: "Agriculture",
     summary: "Tractors, harvesters, implements, workshops, and spare kits are supporting food production and food security.",
     full: "The Renewed Hope Agricultural Mechanization Programme includes tractors, combine harvesters, farming implements, mobile tools workshops, and spare kits, representing a major national investment in agricultural productivity.",
     stats: [["2,000", "Tractors"], ["9,000", "Farming implements"], ["12", "Mobile workshops"]],
@@ -423,7 +423,7 @@ function initCommitmentGrid() {
     { index: 3, title: "Universal Health Coverage", subtitle: commitments[3].subtitle, summary: "Medipool established for affordable healthcare. 4 Million Nigerians enrolled in just two years versus 16M in previous two decades." },
     { index: 5, title: "Primary Healthcare", subtitle: commitments[5].subtitle, summary: "Commitment to revamp 17,600 Primary Healthcare Centres by 2027. 1,480 already revamped, 5,500 being upgraded across all zones." },
     { index: 6, title: "FCT Roads", subtitle: commitments[6].subtitle, summary: commitments[6].summary },
-    { index: 7, title: "Renewed Hope Agricultural", subtitle: "Mechanization Programme", summary: "2,000 tractors, 10 combine harvesters, 9,000 farming implements - the largest agricultural mechanization procurement in Nigeria's history." },
+    { index: 7, title: "Renewed Hope Agricultural Mechanization Programme", subtitle: "Agriculture", summary: "2,000 tractors, 10 combine harvesters, 9,000 farming implements - the largest agricultural mechanization procurement in Nigeria's history." },
     { index: 12, title: "Nigeria-UK Relations", subtitle: commitments[12].subtitle, summary: commitments[12].summary },
     { index: 8, title: "ASUU-FGN Pact", subtitle: commitments[8].subtitle, summary: "A landmark agreement that ends years of disputes and restores academic stability across Nigeria's university system." },
     { index: 9, title: "Hope - CT (Conditional Cash Transfer)", subtitle: "N75 Billion for MSMEs", summary: "N75 Billion for MSMEs, N11 Billion SMEDAN support, and N30 Billion Youth Entrepreneurship Fund creating jobs across Nigeria." },
