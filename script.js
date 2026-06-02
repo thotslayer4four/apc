@@ -5,8 +5,8 @@ const commitments = [
     summary: "Establishing cancer treatment centres across Nigeria's geopolitical zones to bring world-class medical care to Nigerians.",
     full: "To reduce the threat of cancer and increase access to world class medical services, the Renewed Hope Health Agenda is establishing six new cancer treatment centres across Nigeria's geopolitical zones. Three have been commissioned and are operational in Edo, Enugu and Katsina states.",
     stats: [["6", "New cancer centres"], ["3", "Centres operational"], ["Edo, Enugu, Katsina", "States covered"]],
-    image: "component-22-1.png",
-    card: "frame-2087327867.png",
+    image: "component-22-1.jpg",
+    card: "frame-2087327867.jpg",
     detailImage: "cards/billboards-world-class-cancer-treatment-centres.jpg",
     featureImage: "cards/billboards-world-class-cancer-treatment-centres.jpg"
   },
@@ -16,8 +16,8 @@ const commitments = [
     summary: "Funding support for MSMEs, SMEs, and youth entrepreneurship is creating jobs and expanding economic inclusion.",
     full: "The Presidential Intervention Fund for MSMEs, SMEDAN support for SMEs, and youth entrepreneurship interventions are creating jobs, strengthening small businesses, and empowering Nigerians across the federation.",
     stats: [["N75B", "MSME intervention fund"], ["N11B", "SMEDAN support"], ["N30B", "Youth entrepreneurship fund"]],
-    image: "component-23-1.png",
-    card: "frame-2087327867-1.png",
+    image: "component-23-1.jpg",
+    card: "frame-2087327867-1.jpg",
     detailImage: "cards/billboards-msmes.jpg",
     featureImage: "cards/billboards-msmes.jpg"
   },
@@ -27,10 +27,10 @@ const commitments = [
     summary: "Expanding access to quality education and digital skills through the 3MTT programme, iDICE, and youth innovation initiatives across Nigeria.",
     full: "The Tinubu administration is investing in education and digital skills development through the 3 Million Technical Talent (3MTT) programme, iDICE digital investment, and the Creative Enterprise Development Fund — equipping young Nigerians with skills for the 21st-century economy.",
     stats: [["$617M", "iDICE education investment"], ["$100M", "Creative enterprise fund"], ["3MTT", "Digital skills programme"]],
-    image: "component-19-1.png",
-    card: "frame-2087327867-2.png",
-    detailImage: "cards/education.png",
-    featureImage: "cards/education.png"
+    image: "component-19-1.jpg",
+    card: "frame-2087327867-2.jpg",
+    detailImage: "cards/education.jpg",
+    featureImage: "cards/education.jpg"
   },
   {
     title: "Universal Health Coverage",
@@ -38,8 +38,8 @@ const commitments = [
     summary: "Medipool and expanded health insurance enrolment are improving access to quality, affordable healthcare.",
     full: "The federal government has established Medipool to support affordable medical care, while millions of Nigerians have been enrolled into the National Health Insurance Scheme in just two years.",
     stats: [["4M", "New enrolments"], ["16M", "Previous two decades"], ["5x", "Faster growth rate"]],
-    image: "component-22-1.png",
-    card: "frame-2087327867-3.png",
+    image: "component-22-1.jpg",
+    card: "frame-2087327867-3.jpg",
     detailImage: "cards/BILLBOARDS - Universal Healthcare .jpg",
     featureImage: "cards/med.jpg"
   },
@@ -49,10 +49,10 @@ const commitments = [
     summary: "Interest free student loans are opening higher education to qualified Nigerian students regardless of background.",
     full: "The Nigerian Education Loan Fund removes financial barriers to higher education by providing interest free loans that support tuition and living needs for Nigerian students.",
     stats: [["Interest Free", "Loan type"], ["Tuition", "Education support"], ["All Nigerians", "Eligibility focus"]],
-    image: "component-19-1.png",
-    card: "frame-2087327867-4.png",
+    image: "component-19-1.jpg",
+    card: "frame-2087327867-4.jpg",
     detailImage: "cards/billboards-nelfund.jpg",
-    featureImage: "cards/education.png"
+    featureImage: "cards/education.jpg"
   },
   {
     title: "Primary Healthcare Centres",
@@ -60,8 +60,8 @@ const commitments = [
     summary: "Thousands of primary healthcare centres are being revamped and upgraded across the six geopolitical zones.",
     full: "The administration has reaffirmed its commitment to revamp 17,600 Primary Healthcare Centres by 2027, with hundreds revamped and thousands more undergoing upgrades.",
     stats: [["17,600", "Target by 2027"], ["1,480", "Already revamped"], ["5,500", "Being upgraded"]],
-    image: "component-22-1.png",
-    card: "frame-2087327867-5.png",
+    image: "component-22-1.jpg",
+    card: "frame-2087327867-5.jpg",
     detailImage: "cards/billboards-primary-healthcare-delivery.jpg",
     featureImage: "cards/billboards-primary-healthcare-delivery.jpg"
   },
@@ -71,8 +71,8 @@ const commitments = [
     summary: "Major road projects are connecting cities, improving commerce, reducing travel time, and supporting national productivity.",
     full: "Federal road infrastructure remains a catalyst for economic development, connecting markets and reducing transportation costs for businesses, farmers, and families.",
     stats: [["Nationwide", "Project coverage"], ["Highways", "Core focus"], ["Commerce", "Economic impact"]],
-    image: "frame-2087327867-9.png",
-    card: "frame-2087327867-9.png",
+    image: "frame-2087327867-9.jpg",
+    card: "frame-2087327867-9.jpg",
     detailImage: "cards/billboards-fct-roads-infrastructure.jpg",
     featureImage: "cards/billboards-fct-roads-infrastructure.jpg"
   },
@@ -82,8 +82,8 @@ const commitments = [
     summary: "Tractors, harvesters, implements, workshops, and spare kits are supporting food production and food security.",
     full: "The Renewed Hope Agricultural Mechanization Programme includes tractors, combine harvesters, farming implements, mobile tools workshops, and spare kits, representing a major national investment in agricultural productivity.",
     stats: [["2,000", "Tractors"], ["9,000", "Farming implements"], ["12", "Mobile workshops"]],
-    image: "frame-2087327867-6.png",
-    card: "frame-2087327867-6.png",
+    image: "frame-2087327867-6.jpg",
+    card: "frame-2087327867-6.jpg",
     detailImage: "cards/BILLBOARDS - Agricultural Mechanisation.jpg",
     featureImage: "cards/BILLBOARDS - Agricultural Mechanisation.jpg"
   },
@@ -93,10 +93,10 @@ const commitments = [
     summary: "A landmark agreement restored confidence and academic stability across Nigeria's university system.",
     full: "The successful renegotiation and signing of the ASUU FGN pact helped end recurring disputes and addressed inherited salary backlogs, supporting a more stable academic calendar.",
     stats: [["16 Years", "Disputes resolved"], ["100%", "Withheld salaries paid"], ["Stability", "Education outcome"]],
-    image: "frame-2087327867-4.png",
-    card: "frame-2087327867-4.png",
-    detailImage: "cards/asuu-fgn.png",
-    featureImage: "cards/asuu-fgn.png"
+    image: "frame-2087327867-4.jpg",
+    card: "frame-2087327867-4.jpg",
+    detailImage: "cards/asuu-fgn.jpg",
+    featureImage: "cards/asuu-fgn.jpg"
   },
   {
     title: "Social Investment Programme",
@@ -104,8 +104,8 @@ const commitments = [
     summary: "Direct cash transfer support has reached poor and vulnerable Nigerians across urban and rural communities.",
     full: "The Renewed Hope administration has delivered direct cash transfers to more than 9.1 million poor and vulnerable Nigerians, providing critical support across communities nationwide.",
     stats: [["9,178,837", "Beneficiaries reached"], ["Nationwide", "Coverage"], ["Social Register", "Targeting"]],
-    image: "frame-2087327867-3.png",
-    card: "frame-2087327867-3.png",
+    image: "frame-2087327867-3.jpg",
+    card: "frame-2087327867-3.jpg",
     detailImage: "cards/social-investment.jpg",
     featureImage: "cards/social-investment.jpg"
   },
@@ -115,8 +115,8 @@ const commitments = [
     summary: "Student entrepreneurs are receiving funding and resources to turn innovative ideas into successful ventures.",
     full: "The SVCG initiative supports student entrepreneurs with funding and resources, helping young Nigerians launch startups, create jobs, and contribute to economic growth.",
     stats: [["N50M", "Grant amount"], ["Nationwide", "Implementation"], ["Students", "Entrepreneur focus"]],
-    image: "frame-2087327867-10.png",
-    card: "frame-2087327867-10.png",
+    image: "frame-2087327867-10.jpg",
+    card: "frame-2087327867-10.jpg",
     detailImage: "cards/SVCG.jpg",
     featureImage: "cards/SVCG.jpg"
   },
@@ -126,8 +126,8 @@ const commitments = [
     summary: "Expanded international engagement is opening new markets, stronger exports, and strategic investment partnerships.",
     full: "Nigeria's trade diplomacy has expanded through BRICS engagement and partnerships with Brazil, Qatar, UAE, and Turkey, unlocking markets and strengthening competitiveness.",
     stats: [["14%", "Intra-African trade growth"], ["7,000+", "Tariff free products"], ["$5B", "Projected trade volume"]],
-    image: "frame-2087327867-8.png",
-    card: "frame-2087327867-8.png",
+    image: "frame-2087327867-8.jpg",
+    card: "frame-2087327867-8.jpg",
     detailImage: "cards/trade-diplomacy.jpg",
     featureImage: "cards/trade-diplomacy.jpg"
   },
@@ -137,8 +137,8 @@ const commitments = [
     summary: "A landmark UK state visit has unlocked strategic bilateral agreements across infrastructure, trade, and energy.",
     full: "Nigeria's renewed diplomatic engagement with the United Kingdom is strengthening cooperation across infrastructure, trade, energy, and investment priorities.",
     stats: [["UK", "Strategic partner"], ["Trade", "Economic focus"], ["Energy", "Cooperation area"]],
-    image: "frame-2087327867-11.png",
-    card: "frame-2087327867-11.png",
+    image: "frame-2087327867-11.jpg",
+    card: "frame-2087327867-11.jpg",
     detailImage: "cards/uk-nigeria-relations.jpg",
     featureImage: "cards/uk-nigeria-relations.jpg"
   },
@@ -148,8 +148,8 @@ const commitments = [
     summary: "Strong GDP growth, rising reserves, and sector-wide reform are reinforcing confidence in Nigeria's macroeconomic direction.",
     full: "Economic reforms under the Renewed Hope Agenda are supporting recovery, improving fiscal stability, and strengthening confidence in Nigeria's long-term growth.",
     stats: [["4.4%", "GDP growth"], ["Recovery", "Economic direction"], ["Reforms", "Policy focus"]],
-    image: "frame-2087327867-12.png",
-    card: "frame-2087327867-12.png",
+    image: "frame-2087327867-12.jpg",
+    card: "frame-2087327867-12.jpg",
     detailImage: "cards/economic-recovery.jpg",
     featureImage: "cards/economic-recovery.jpg"
   },
@@ -170,10 +170,10 @@ const commitments = [
     summary: "A ₦300 billion supplementary budget is driving legacy superhighways, nationwide dualizations, 260+ emergency palliatives, and critical bridge reconstructions across every geopolitical zone.",
     full: "Under the Tinubu administration, the Federal Ministry of Works and FERMA are executing a strategic mix of legacy superhighways, critical dualization projects, and preventive maintenance across Nigeria.",
     stats: [["700 km", "Lagos-Calabar Coastal Highway"], ["260+", "Emergency palliative repairs"], ["₦300B", "Supplementary road budget"]],
-    image: "slider/slider4.png",
-    card: "slider/slider4.png",
-    detailImage: "slider/slider4.png",
-    featureImage: "slider/slider4.png",
+    image: "slider/slider4.jpg",
+    card: "slider/slider4.jpg",
+    detailImage: "slider/slider4.jpg",
+    featureImage: "slider/slider4.jpg",
     gallery: [
       {
         src: "federal ministry of works/LAGOS-CALABAR COASTAL HIGHWAY.jpeg",
@@ -239,9 +239,9 @@ const commitments = [
     summary: "President Bola Ahmed Tinubu has appointed the highest number of youths in government leadership positions in Nigeria's history.",
     full: "President Bola Ahmed Tinubu has appointed the highest number of youths in government leadership positions in Nigeria's history, ensuring that the next generation has a direct voice in shaping the policies and decisions that will define Nigeria's future.",
     stats: [["Highest Ever", "Youth appointments in history"], ["Nationwide", "Representation across ministries"], ["2023–Present", "Under Tinubu administration"]],
-    image: "list/5.png",
-    card: "list/5.png",
-    featureImage: "list/5.png"
+    image: "list/5.jpg",
+    card: "list/5.jpg",
+    featureImage: "list/5.jpg"
   },
   {
     title: "Gas to Prosperity",
@@ -249,10 +249,10 @@ const commitments = [
     summary: "With the complete linking of southern to northern regions via gas pipelines and over ₦10B in Final Investment Decisions, Nigeria's gas revolution is becoming a reality.",
     full: "With the complete linking of the southern to the northern regions with gas pipelines and over ₦10 Billion in Final Investment Decisions, the Tinubu administration is turning Nigeria's vast gas reserves into an engine of economic growth, industrialization, and energy security.",
     stats: [["₦10B+", "Final Investment Decisions"], ["North–South", "Pipeline connection achieved"], ["Gas Revolution", "National energy objective"]],
-    image: "cards/Gas to prosperity.png",
-    card: "cards/Gas to prosperity.png",
-    detailImage: "cards/Gas to prosperity.png",
-    featureImage: "cards/Gas to prosperity.png"
+    image: "cards/Gas to prosperity.jpg",
+    card: "cards/Gas to prosperity.jpg",
+    detailImage: "cards/Gas to prosperity.jpg",
+    featureImage: "cards/Gas to prosperity.jpg"
   },
   {
     title: "Support for SMEs & MSMEs",
