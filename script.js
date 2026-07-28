@@ -268,6 +268,70 @@ const commitments = [
   }
 ];
 
+function escapeHtml(value) {
+  return String(value ?? "").replace(/[&<>"']/g, (c) => ({
+    "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+  }[c]));
+}
+
+function formatNewsDate(dateString) {
+  const date = new Date(`${dateString}T00:00:00`);
+  return date.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
+}
+
+function newsCardMarkup(entry, linkToNewsPage) {
+  const title = escapeHtml(entry.title);
+  const media = `
+    <img src="${escapeHtml(entry.image)}" alt="${title}" loading="lazy">
+    <span class="news-tag">${escapeHtml(entry.category)}</span>
+  `;
+  return `
+    <article class="news-card">
+      ${linkToNewsPage
+        ? `<a class="news-media" href="news.html" aria-label="Read ${title} on the News page">${media}</a>`
+        : `<div class="news-media">${media}</div>`}
+      <div class="news-content">
+        <span class="news-date">${formatNewsDate(entry.date)}</span>
+        <h3>${title}</h3>
+        <p>${escapeHtml(entry.summary)}</p>
+      </div>
+    </article>
+  `;
+}
+
+// News is published through the admin panel (admin.html) and served from
+// api/news-list.php, which is backed by data/news.json on the server.
+let newsCache = null;
+
+async function fetchNewsItems() {
+  if (newsCache) return newsCache;
+  try {
+    const res = await fetch("api/news-list.php");
+    const data = await res.json();
+    const list = Array.isArray(data.news) ? data.news.slice() : [];
+    list.sort((a, b) => (a.date < b.date ? 1 : -1));
+    newsCache = list;
+    return list;
+  } catch (err) {
+    return [];
+  }
+}
+
+async function initHomeNews() {
+  const grid = document.getElementById("home-news-grid");
+  if (!grid) return;
+  const news = await fetchNewsItems();
+  const featured = news.filter((entry) => entry.featured).slice(0, 3);
+  grid.innerHTML = featured.map((entry) => newsCardMarkup(entry, true)).join("");
+}
+
+async function initNewsGrid() {
+  const grid = document.getElementById("news-grid");
+  if (!grid) return;
+  const news = await fetchNewsItems();
+  grid.innerHTML = news.map((entry) => newsCardMarkup(entry, false)).join("");
+}
+
 function cardMarkup(item, index) {
   return `
     <article class="promise-card">
@@ -576,5 +640,7 @@ initMenu();
 initHeroSlider();
 initHomeCards();
 initCommitmentGrid();
+initHomeNews();
+initNewsGrid();
 initDetailPage();
 initScrollCue();

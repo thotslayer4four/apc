@@ -2,3 +2,12 @@
 .DS_Store
 php-server.err
 php-server.log
+
+# Admin panel persistent storage — never commit real news content,
+# uploaded photos, or the admin password hash. These directories live
+# only on the server and are intentionally excluded from .cpanel.yml too,
+# so they survive every deploy instead of being wiped.
+data/*.json
+uploads/news/*
+!uploads/news/.gitkeep
+!uploads/news/.htaccess

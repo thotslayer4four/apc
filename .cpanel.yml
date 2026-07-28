@@ -9,9 +9,17 @@ deployment:
     - /bin/cp contact.html $DEPLOYPATH
     - /bin/cp radio.html $DEPLOYPATH
     - /bin/cp detail.html $DEPLOYPATH
+    - /bin/cp news.html $DEPLOYPATH
+    - /bin/cp admin.html $DEPLOYPATH
     - /bin/cp script.js $DEPLOYPATH
+    - /bin/cp admin.js $DEPLOYPATH
     - /bin/cp styles.css $DEPLOYPATH
     - /bin/cp robots.txt $DEPLOYPATH
     - /bin/cp sitemap.xml $DEPLOYPATH
     - /bin/rm -rf ${DEPLOYPATH}assets && /bin/cp -R assets ${DEPLOYPATH}
     - /bin/rm -rf ${DEPLOYPATH}api && /bin/cp -R api ${DEPLOYPATH}
+    # data/ and uploads/ are intentionally NOT copied here. They hold the live
+    # news content, uploaded photos, and admin password hash written by the
+    # admin panel directly on the server. Copying (or rm -rf'ing) them on every
+    # deploy would wipe everything posted from the admin panel since the last
+    # code push, so they are left alone and persist across deploys.
