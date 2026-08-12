@@ -1,5 +1,5 @@
 const ADMIN_CATEGORIES = ["Healthcare", "Education", "Agriculture", "Energy", "Infrastructure", "Youth", "Party", "Economy"];
-const MAX_FEATURED = 3;
+const HOMEPAGE_COUNT = 3;
 
 const root = document.getElementById("admin-root");
 const logoutBtn = document.getElementById("admin-logout-btn");
@@ -70,8 +70,12 @@ async function loadNews() {
   state.news = Array.isArray(data.news) ? data.news : [];
 }
 
-function featuredCount(excludingId) {
-  return state.news.filter((n) => n.featured && n.id !== excludingId).length;
+function sortedByDateDesc(news) {
+  return news.slice().sort((a, b) => (a.date < b.date ? 1 : -1));
+}
+
+function homepageStoryIds(news) {
+  return new Set(sortedByDateDesc(news).slice(0, HOMEPAGE_COUNT).map((n) => n.id));
 }
 
 function formatDate(dateStr) {
@@ -140,16 +144,14 @@ function attachLoginHandlers() {
 }
 
 function renderPanelHtml() {
-  const featCount = featuredCount(null);
   const editing = state.editingId ? state.news.find((n) => n.id === state.editingId) : null;
   const editingIsOtherCategory = editing && !ADMIN_CATEGORIES.includes(editing.category);
-  const atCap = (!editing || !editing.featured) && featCount >= MAX_FEATURED;
 
   return `
     <section class="admin-panel">
       <div class="admin-panel-header">
         <h1>${editing ? "Edit Story" : "Publish News"}</h1>
-        <span class="admin-featured-count">${featCount}/${MAX_FEATURED} featured on homepage</span>
+        <span class="admin-featured-count">Homepage shows your ${HOMEPAGE_COUNT} most recent stories</span>
       </div>
 
       ${state.error ? `<p class="admin-form-error" role="alert">${escapeHtml(state.error)}</p>` : ""}
@@ -184,7 +186,7 @@ function renderPanelHtml() {
 
         <div class="admin-field">
           <label for="admin-summary">Summary</label>
-          <textarea id="admin-summary" name="summary" rows="4" required maxlength="400">${editing ? escapeHtml(editing.summary) : ""}</textarea>
+          <textarea id="admin-summary" name="summary" rows="8" required>${editing ? escapeHtml(editing.summary) : ""}</textarea>
         </div>
 
         <div class="admin-field">
@@ -194,12 +196,6 @@ function renderPanelHtml() {
             ${editing ? `<img src="${escapeHtml(editing.image)}" alt="Current photo">` : ""}
           </div>
         </div>
-
-        <label class="admin-featured-toggle">
-          <input type="checkbox" name="featured" value="1" id="admin-featured" ${editing && editing.featured ? "checked" : ""} ${atCap ? "disabled" : ""}>
-          Feature on homepage
-        </label>
-        ${atCap ? `<p class="admin-hint">Homepage is full — un-feature another story to feature this one.</p>` : ""}
 
         <div class="admin-form-actions">
           <button class="btn admin-btn-primary" type="submit">${editing ? "Save Changes" : "Publish Story"}</button>
@@ -229,14 +225,13 @@ function renderPanelHtml() {
 
       <div class="admin-list">
         <h2>All News (${state.news.length})</h2>
-        ${state.news.length === 0 ? `<p class="admin-empty">No stories yet — publish your first one above.</p>` : state.news
-          .slice()
-          .sort((a, b) => (a.date < b.date ? 1 : -1))
-          .map((item) => `
+        ${state.news.length === 0 ? `<p class="admin-empty">No stories yet — publish your first one above.</p>` : (() => {
+          const homepageIds = homepageStoryIds(state.news);
+          return sortedByDateDesc(state.news).map((item) => `
             <article class="admin-list-item" data-id="${escapeHtml(item.id)}">
               <img src="${escapeHtml(item.image)}" alt="" loading="lazy">
               <div class="admin-list-item-body">
-                <span class="admin-list-item-meta">${formatDate(item.date)} · ${escapeHtml(item.category)}${item.featured ? ' · <strong class="admin-featured-badge">Featured</strong>' : ""}</span>
+                <span class="admin-list-item-meta">${formatDate(item.date)} · ${escapeHtml(item.category)}${homepageIds.has(item.id) ? ' · <strong class="admin-featured-badge">On Homepage</strong>' : ""}</span>
                 <h3>${escapeHtml(item.title)}</h3>
               </div>
               <div class="admin-list-item-actions">
@@ -244,7 +239,8 @@ function renderPanelHtml() {
                 <button type="button" class="admin-delete-btn" data-action="delete" data-id="${escapeHtml(item.id)}">Delete</button>
               </div>
             </article>
-          `).join("")}
+          `).join("");
+        })()}
       </div>
     </section>
   `;
@@ -292,9 +288,6 @@ function attachPanelHandlers() {
     const submitBtn = newsForm.querySelector('button[type="submit"]');
     submitBtn.disabled = true;
     const formData = new FormData(newsForm);
-    if (!newsForm.querySelector('[name="featured"]').checked) {
-      formData.delete("featured");
-    }
     const { ok, data } = await apiPostForm(formData);
     submitBtn.disabled = false;
     if (ok) {

@@ -9,8 +9,6 @@ $title = trim((string) ($_POST['title'] ?? ''));
 $category = trim((string) ($_POST['category'] ?? ''));
 $date = trim((string) ($_POST['date'] ?? ''));
 $summary = trim((string) ($_POST['summary'] ?? ''));
-$featuredRaw = (string) ($_POST['featured'] ?? '');
-$featured = $featuredRaw !== '' && $featuredRaw !== '0' && $featuredRaw !== 'false';
 
 if ($title === '' || $category === '' || $summary === '') {
     json_response(['error' => 'Title, category, and summary are required.'], 422);
@@ -31,7 +29,7 @@ try {
 $result = null;
 $error = null;
 
-write_news(function ($news) use ($id, $title, $category, $date, $summary, $featured, $newImage, &$result, &$error) {
+write_news(function ($news) use ($id, $title, $category, $date, $summary, $newImage, &$result, &$error) {
     $existingIndex = null;
     if ($id !== '') {
         foreach ($news as $i => $item) {
@@ -46,12 +44,6 @@ write_news(function ($news) use ($id, $title, $category, $date, $summary, $featu
         }
     }
 
-    $featuredCount = count_featured($news, $id !== '' ? $id : null);
-    if ($featured && $featuredCount >= MAX_FEATURED) {
-        $error = 'Only ' . MAX_FEATURED . ' stories can be featured on the homepage at once. Un-feature another story first.';
-        return $news;
-    }
-
     $now = date('c');
 
     if ($existingIndex !== null) {
@@ -61,7 +53,6 @@ write_news(function ($news) use ($id, $title, $category, $date, $summary, $featu
             'category' => $category,
             'date' => $date,
             'summary' => $summary,
-            'featured' => $featured,
             'image' => $image,
             'updatedAt' => $now,
         ]);
@@ -73,7 +64,6 @@ write_news(function ($news) use ($id, $title, $category, $date, $summary, $featu
             'category' => $category,
             'date' => $date,
             'summary' => $summary,
-            'featured' => $featured,
             'image' => $newImage ?? DEFAULT_NEWS_IMAGE,
             'createdAt' => $now,
             'updatedAt' => $now,

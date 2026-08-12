@@ -18,7 +18,6 @@ define('THROTTLE_FILE', DATA_DIR . '/login_throttle.json');
 // Change it immediately from the admin panel after first login.
 define('DEFAULT_ADMIN_PASSWORD_HASH', '$2y$12$3Y//hShIaUtnEs1AaN1BOedUcM/Eo4a50foHWh26RmgjoGHK.R3C2');
 
-define('MAX_FEATURED', 3);
 define('MAX_UPLOAD_BYTES', 8 * 1024 * 1024);
 define('ALLOWED_IMAGE_EXT', ['jpg', 'jpeg', 'png', 'webp']);
 define('DEFAULT_NEWS_IMAGE', 'assets/images/apromiseimg-1.png');

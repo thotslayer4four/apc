@@ -320,9 +320,10 @@ async function fetchNewsItems() {
 async function initHomeNews() {
   const grid = document.getElementById("home-news-grid");
   if (!grid) return;
+  // fetchNewsItems() returns items sorted by date desc, so the home page
+  // always shows the 3 most recently published stories automatically.
   const news = await fetchNewsItems();
-  const featured = news.filter((entry) => entry.featured).slice(0, 3);
-  grid.innerHTML = featured.map((entry) => newsCardMarkup(entry, true)).join("");
+  grid.innerHTML = news.slice(0, 3).map((entry) => newsCardMarkup(entry, true)).join("");
 }
 
 async function initNewsGrid() {

@@ -5660,28 +5660,6 @@ body.admin-page {
   background: var(--soft);
 }
 
-.admin-featured-toggle {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin: 8px 0 4px;
-  color: var(--ink);
-  font-size: 15px;
-  font-weight: 700;
-}
-
-.admin-featured-toggle input {
-  width: 22px;
-  height: 22px;
-  accent-color: var(--green-600);
-}
-
-.admin-hint {
-  margin: 8px 0 0;
-  color: var(--muted);
-  font-size: 13px;
-}
-
 .admin-form-error {
   margin: 0 0 16px;
   padding: 12px 14px;
